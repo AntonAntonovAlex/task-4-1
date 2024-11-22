@@ -1,0 +1,28 @@
+@use "bootstrap" as *; // Подключает Bootstrap SCSS
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 100px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.form-label {
+  font-weight: bold;
+}
+
+.hidden {
+   display: none;
+}
+
+.link-container {
+  text-align: center;
+  margin-top: 15px;
+}

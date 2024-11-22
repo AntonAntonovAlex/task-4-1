@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Users</title>
+</head>
+<body class="bg-light">
+  <div id="loginForm" class="form-container">
+    <h1 class="text-center mb-4">Sign In to The App</h1>
+    <form id="userLoginForm" class="needs-validation" novalidate>
+      <div class="mb-3">
+        <label for="loginEmail" class="form-label">Email:</label>
+        <input type="email" id="loginEmail" class="form-control" placeholder="Введите email" required>
+        <div class="invalid-feedback">
+          email
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="loginPassword" class="form-label">Password:</label>
+        <input type="password" id="loginPassword" class="form-control" placeholder="Введите пароль" required>
+        <div class="invalid-feedback">
+          Password
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+      </div>
+      <div id="loginErrorMessage" class="alert alert-danger hidden"></div>
+    </form>
+    <div class="link-container">
+      <p>Don't have an account? <a href="#" id="goToRegister">Sign Up</a></p>
+    </div>
+  </div>
+  <div id="registration" class="form-container hidden">
+    <h1 class="text-center mb-4">Register in the APP</h1>
+    <form id="registrationForm" class="needs-validation" novalidate>
+        <div class="mb-3">
+          <label for="username" class="form-label">Name:</label>
+          <input type="text" id="nameInput" name="username" class="form-control" placeholder="Введите имя" required>
+          <div class="invalid-feedback">
+            Name
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">Email:</label>
+          <input type="email" id="emailInput" name="email" class="form-control" placeholder="Введите email" required>
+          <div class="invalid-feedback">
+              email
+          </div>
+        </div>
+        <div class="mb-3">
+            <label for="password" class="form-label">Password:</label>
+            <input type="password" id="passwordInput" name="password" class="form-control" placeholder="Введите пароль" required>
+            <div class="invalid-feedback">
+              Password
+            </div>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary w-100">Sign In</button>
+          <div id="addUserErrorMessage" class="alert alert-danger hidden"></div>
+        </div>
+    </form>
+  </div>
+  <div id="usersTable" class="container my-5 hidden">
+    <div id="messageBox" class="alert alert-info text-center hidden" role="alert"></div>
+    <div class="d-flex justify-content-between align-items-center mb-4">
+      <h1 class="text-center mb-0">Users</h1>
+      <button id="logoutButton" class="btn btn-danger">
+        <i class="bi bi-box-arrow-right"></i> Logout
+      </button>
+    </div>
+    <div class="d-flex justify-content-between mb-3">
+      <div>
+        <button id="blockSelected" class="btn btn-light text-primary border-primary">
+          <i class="bi bi-lock text-primary"></i> Block Selected
+        </button>
+        <button class="btn btn-light border-primary" id="unblockSelected">
+          <i class="bi bi-unlock text-primary"></i>
+        </button>
+        <button class="btn btn-light border-danger" id="deleteSelected">
+          <i class="bi bi-trash text-danger"></i>
+        </button>
+      </div>
+      <div class="input-group" style="width: 300px;">
+        <span class="input-group-text" id="filterLabel">Filter by name</span>
+        <input type="text" id="filterInput" class="form-control" placeholder="Search users...">
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th><input type="checkbox" id="selectAll"></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Status</th>
+            <th>Last Login</th>
+          </tr>
+        </thead>
+        <tbody id="usersTableBody">
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
